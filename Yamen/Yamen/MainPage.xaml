@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="Yamen.MainPage"
+             BackgroundColor="#F2F0F3"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <Grid RowDefinitions="0.7*,3*">
+        <WebView Source="https://yementv.tv/" Margin="0" Grid.Row="0"  />
+        <StackLayout Background="white" Grid.Row="1" Margin="0,0,0,0">
+            <Button Text="البث المباشر" x:Name="Livenow" Clicked="Livenow_Clicked"  TextColor="Red"
+                    Background="white" Margin="5" FontSize="20"
+                    xct:ShadowEffect.Color="Gray"
+                    xct:ShadowEffect.OffsetX="5" xct:ShadowEffect.OffsetY="5" />
+            <ScrollView>
+                <Grid Margin="5" RowSpacing="10" ColumnSpacing="5" RowDefinitions="200,200,200"  >
+
+                    <Frame Style="{StaticResource frames}"
+                            xct:ShadowEffect.Color="Gray"
+                    xct:ShadowEffect.OffsetX="5" xct:ShadowEffect.OffsetY="5" 
+                           Grid.Row="0"  Grid.Column="0" >
+                        <Grid RowDefinitions="120" >
+                            <ImageButton  x:Name="LocalNews" Clicked="LocalNews_Clicked_1" Source="Elam.jpg" Padding="0" BackgroundColor="White"  />
+                            <Label Text="الاخبار المحلية" Style="{StaticResource labels}" Grid.Row="1"/>
+
+                        </Grid>
+                    </Frame>
+                    
+                    <Frame  Style="{StaticResource frames}" Grid.Row="0"  Grid.Column="1">
+                        <Grid RowDefinitions="120" >
+                            <ImageButton  x:Name="presdant" Clicked="presdant_Clicked" Source="Rabh.jpg" Grid.Row="0" Padding="0" BackgroundColor="White" />
+                            <Label Text="الرئيس" Style="{StaticResource labels}" Grid.Row="1" />
+
+                        </Grid>
+                    </Frame>
+                    
+                    <Frame  Style="{StaticResource frames}" Grid.Row="1" Grid.Column="0">
+                        <StackLayout>
+                            <ImageButton x:Name="Rebort" Clicked="Rebort_Clicked" Source="Rebort.jpg" Padding="0"/>
+                            <Label Text="التقارير" Style="{StaticResource labels}"/>
+
+                        </StackLayout>
+
+                    </Frame>
+                    
+                    <Frame  Style="{StaticResource frames}" Grid.Row="1" Grid.Column="1">
+                        <Grid RowDefinitions="125" >
+                            <ImageButton x:Name="Asker" Clicked="Asker_Clicked" Source="Asker.jpg" BackgroundColor="White" Grid.Row="0" />
+                            <Label Text="الاعلام العسكري" Style="{StaticResource labels}" Grid.Row="1" />
+                        </Grid>
+                    </Frame>
+                    
+                    <Frame  Style="{StaticResource frames}" Grid.Row="2" Grid.Column="0">
+                        <Grid RowDefinitions="120">
+                            <ImageButton x:Name="Arabicnews" Clicked="Arabicnews_Clicked" Source="arabicnews.jpg" Grid.Row="0" BackgroundColor="White"/>
+                            <Label Text="الاخبار العربية" Grid.Row="1" Style="{StaticResource labels}"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Style="{StaticResource frames}"  HasShadow="True"  Grid.Row="2" Grid.Column="1">
+                        <Grid RowDefinitions="130" >
+                            <ImageButton x:Name="encome" Clicked="encome_Clicked" Source="Envome.jpg" BackgroundColor="White"  Padding="0" Grid.Row="0"/>
+                            <Label Text="إقتصاد" Style="{StaticResource labels}" Grid.Row="1" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame Style="{StaticResource frames}"  HasShadow="True"  Grid.Row="3" Grid.Column="0">
+                        <Grid RowDefinitions="130" >
+                            <ImageButton x:Name="Sports" Clicked="Sports_Clicked" Source="Sports.jpg" BackgroundColor="White"  Padding="0" Grid.Row="0"/>
+                            <Label Text="الرياضة اليمنية" Style="{StaticResource labels}" Grid.Row="1" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame   Style="{StaticResource frames}" HasShadow="True"  Grid.Row="3" Grid.Column="1">
+                        <Grid RowDefinitions="130" >
+                            <ImageButton x:Name="news" Clicked="news_Clicked" Source="News.jpg" BackgroundColor="White"  Padding="0" Grid.Row="0"/>
+                            <Label Text="نشرة الأخبار" Style="{StaticResource labels}" Grid.Row="1" />
+                        </Grid>
+                    </Frame>
+                    
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </Grid>
+    
+</ContentPage>

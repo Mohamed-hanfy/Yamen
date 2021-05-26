@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Yamen.App">
+    <Application.Resources>
+        <!--Font-->
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Boldfont">
+                <On Platform="Android" Value="Mirza-Bold.ttf#Mirza" />
+            </OnPlatform>
+        </ResourceDictionary>
+        <!--style-->
+        <Style TargetType="Frame" x:Key="frames">
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="BorderColor" Value="Black"/>
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+        <Style TargetType="Label" x:Key="labels">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="{StaticResource Boldfont}"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+        </Style>
+    </Application.Resources>
+</Application>
