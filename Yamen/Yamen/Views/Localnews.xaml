@@ -5,7 +5,28 @@
              x:Class="Yamen.Views.Localnews"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
+             BackgroundColor="#0000"
              
              >
-    <WebView Source="https://yementv.tv/local" xct:TouchEffect.IsAvailable="True" />
+    <RefreshView x:Name="myRefreshView" RefreshColor="#2196F3" Refreshing="RefreshView_Refreshing">
+        <!-- WebView needs to be given height and width request within layouts to render. -->
+        <StackLayout>
+
+            <ActivityIndicator IsRunning="true" 
+                           Grid.Row="0"
+                           BackgroundColor="#0000"
+                           AutomationProperties.HelpText="Loading"
+                           x:Name="progress" />
+
+            <WebView x:Name="webView" 
+                     HeightRequest="1000"
+                     WidthRequest="1000"  
+                     VerticalOptions= "FillAndExpand" 
+                     Source="https://yementv.tv/local"
+                     Navigating="webOnNavigating"
+                     Navigated="webOnEndNavigating"/>
+
+
+        </StackLayout>
+    </RefreshView>
 </ContentPage>

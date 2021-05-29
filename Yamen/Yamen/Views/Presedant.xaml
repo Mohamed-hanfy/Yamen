@@ -5,5 +5,21 @@
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
              >
-    <WebView Source="https://yementv.tv/president"/>
+    <StackLayout>
+
+        <ActivityIndicator IsRunning="true" 
+                           BackgroundColor="#0000"
+                           AutomationProperties.HelpText="Loading"
+                           x:Name="progress" />
+
+        <WebView x:Name="webView" 
+                     HeightRequest="1000"
+                     WidthRequest="1000"  
+                     VerticalOptions= "FillAndExpand" 
+                     Source="https://yementv.tv/president"
+                     Navigating="webOnNavigating"
+                     Navigated="webOnEndNavigating"/>
+
+
+    </StackLayout>
 </ContentPage>

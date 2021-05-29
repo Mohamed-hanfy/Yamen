@@ -16,5 +16,25 @@ namespace Yamen.Views
         {
             InitializeComponent();
         }
+        void webOnNavigating(object sender, WebNavigatingEventArgs e)
+        {
+            progress.IsVisible = true;
+        }
+
+        void webOnEndNavigating(object sender, WebNavigatedEventArgs e)
+        {
+            progress.IsVisible = false;
+
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            if (webView.CanGoBack)
+            {
+                webView.GoBack();
+                return true;
+            }
+
+            return base.OnBackButtonPressed();
+        }
     }
 }

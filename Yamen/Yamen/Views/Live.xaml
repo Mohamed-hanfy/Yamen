@@ -5,5 +5,22 @@
               NavigationPage.HasBackButton="False"
              NavigationPage.HasNavigationBar="False"
              >
-    <WebView Source="https://yementv.tv/live"/>
+    <StackLayout>
+
+        <ActivityIndicator IsRunning="true" 
+                           Grid.Row="0"
+                           BackgroundColor="#0000"
+                           AutomationProperties.HelpText="Loading"
+                           x:Name="progress" />
+
+        <WebView x:Name="webView" 
+                     HeightRequest="1000"
+                     WidthRequest="1000"  
+                     VerticalOptions= "FillAndExpand" 
+                    Source="https://yementv.tv/live"
+                     Navigating="webOnNavigating"
+                     Navigated="webOnEndNavigating"/>
+
+
+    </StackLayout>
 </ContentPage>

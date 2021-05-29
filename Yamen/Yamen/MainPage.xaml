@@ -7,10 +7,10 @@
              NavigationPage.HasNavigationBar="False"
              >
     <Grid RowDefinitions="0.7*,3*">
-        <WebView Source="https://yementv.tv/" Margin="0" Grid.Row="0"  />
+        <WebView Source="https://yementv.tv/" Margin="0" Grid.Row="0"/>
         <StackLayout Background="white" Grid.Row="1" Margin="0,0,0,0">
-            <Button Text="البث المباشر" x:Name="Livenow" Clicked="Livenow_Clicked"  TextColor="Red"
-                    Background="white" Margin="5" FontSize="20"
+            <Button Text="البث المباشر" x:Name="Livenow" Clicked="Livenow_Clicked" FontFamily="Bold"  TextColor="Red"
+                    Background="white" Margin="5" FontSize="25"
                     xct:ShadowEffect.Color="Gray"
                     xct:ShadowEffect.OffsetX="5" xct:ShadowEffect.OffsetY="5" />
             <ScrollView>
